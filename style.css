@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #212028 ;
+    position: relative;
+    height: 100vh;
+}
+
+body::before{
+    position: absolute;
+    content: '';
+    right: 0;
+    background-color: #ffbe00;
+    width: 40%;
+    height: 100%;
+    z-index: -1;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: antiquewhite;
+    padding: 5px 0px;
+}
+
+header .logo h1{
+    font-family: 'Zen Dots', cursive;
+    color: #ffbe00;
+    cursor: pointer;
+}
+
+
+.link ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.link ul li{
+    margin: 10px;
+    position: relative;
+}
+
+.link ul li::after{
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 30%;
+    background: antiquewhite;
+    height: 1px;
+    transform: scaleX(0);
+
+}
+
+.link ul li:hover:after{
+    transform: scaleX(1);
+    transition: .5s transform;
+    width: 50%;
+
+}
+
+.link ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+/* active */
+
+
+.active{
+    border-bottom: 2px solid #ffbe00;
+    color: #ffbe00;
+}
+
+/* active */
+
+/* icon-logo */
+.icon-logo span{
+    padding: 0px 20px;
+    color: #212028;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* icon-logo */
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+section .text-btn{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+section .text-btn .textt{
+    padding-left: 10px;
+    color: antiquewhite;
+    width: 25%;
+    text-transform: capitalize;
+    font-weight: 900;
+    display: grid;
+}
+section .text-btn .textt span{
+    color: #ffbe00;
+    font-family: 'Pacifico', cursive;
+}
+
+section .text-btn .textt button{
+    background: none;
+    color: antiquewhite;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 50px;
+    border: 2px solid antiquewhite;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+section .text-btn .textt button:hover{
+    background: #ffbe00;
+    transition: .5s;
+    color: #212028;
+    font-weight: 900;
+}
+
+section .logo-img{
+    position: relative;
+}
+
+
+
+
+section .logo-img img{
+    border: 1px solid antiquewhite;
+    border-radius: 50%;
+    width: 200px;
+    padding: 10px;
+}
+
+
+
+section .icon-media{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #212028;
+    padding: 10px;
+
+}
+
+section .icon-media img{
+    width: 25px;
+    padding: 5px 0px ;
+}
+
+
+
+
+
+
+
+@media (max-width:576px) {
+    .link{
+        display: none;
+    }
+    .icon-logo .search{
+        color: antiquewhite;
+        background-color: #ffbe00;
+        border-radius: 50%;
+        padding: 5px;
+        border: 1px solid antiquewhite;
+    }
+    .icon-logo .shopping_cart{
+        font-weight: 100;
+        color: antiquewhite;
+        background-color: #212028;
+        border-radius: 50%;
+        padding: 5px;
+        border: 1px solid antiquewhite;
+    }
+    .text-btn{
+        display: flex;
+        justify-items: stretch;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    section .text-btn .textt{
+        width: 75%;
+    }
+    body::before{
+        position: absolute;
+        content: '';
+        right: 0;
+        background-color: #ffbe00;
+        width: 25.5%;
+        height: 100%;
+        z-index: -1;
+    }
+}
